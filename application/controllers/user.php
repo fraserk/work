@@ -90,11 +90,11 @@
 
 				//let send the Email here..
 
-				$mailer = IoC::resolve('phpmailer');
-				$mailer->AddAddress( 'kimfraser@gmail.com', 'kimfraser' );
-			    $mailer->Subject  = "Laravel Rocks";
-			    $mailer->Body     = "Hi! Laravel is awesomesauce!";
-			    $mailer->Send();
+				$message = Message::to('kimfraser@gmail.com')
+	            ->from('kimfraser@gmail.com', 'kim fraser')
+	            ->subject('Hello!')
+	            ->body('Well hello Someone, how is it going?')
+	            ->send();
 			    
 
 

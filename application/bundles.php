@@ -36,7 +36,8 @@
 return array(
 
 	'docs' => array('handles' => 'docs'),
-	'phpmailer' => array(
-        'auto'  => true)
+	'messages' => array(
+    'auto' => true
+),
 );
 
