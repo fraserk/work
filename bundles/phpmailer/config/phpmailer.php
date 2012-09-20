@@ -37,7 +37,7 @@
  */
 
 return array(
-	'SetFrom'    => array('colin@example.com','Colin Viebrock'),
+	'SetFrom'    => array('kimfraser@gmail.com',kimfraser'),
 	'IsSMTP'     => null,
-	'Host'       => 'smtp.example.com',
+	'Host'       => 'aspmx.l.google.com',
 );

@@ -89,14 +89,13 @@
 
 
 				//let send the Email here..
-				Bundle::start('swiftmailer');
-				$mailer = IoC::resolve('mailer');
-				$message = Swift_message::newInstance('Password Reset')
-							->setFrom(array('kimfraser@gmail.com'=>'Kim Fraser'))
-							->setTo(array('kimfraser@gmail.com'=>'Kimfraser'))
-							->addPart('My Plain Text Message','text/plain')
-    						->setBody('My HTML Message','text/html');
-			    $mailer->send($message);
+
+				$mailer = IoC::resolve('phpmailer');
+				$mailer->AddAddress( 'kimfraser@gmail.com', 'kimfraser' );
+			    $mailer->Subject  = "Laravel Rocks";
+			    $mailer->Body     = "Hi! Laravel is awesomesauce!";
+			    $mailer->Send();
+			    
 
 
 				//everything is good, redirect back

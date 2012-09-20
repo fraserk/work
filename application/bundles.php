@@ -36,6 +36,8 @@
 return array(
 
 	'docs' => array('handles' => 'docs'),
-	'swiftmailer' => array('auto'=>true),
+	'phpmailer' => array(
+        'auto'  => true
+    ),
 );
 
