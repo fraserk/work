@@ -88,8 +88,9 @@
 					));
 
 
-				//let send the email here..
+				//let send the Email here..
 
+				SBundle::start('swiftmailer');
 				$mailer = IoC::resolve('mailer');
 				$message = Swift_message::newInstance('Password Reset')
 							->setFrom(array('kimfraser@gmail.com'=>'Kim Fraser'))
