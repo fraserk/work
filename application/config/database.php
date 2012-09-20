@@ -14,7 +14,7 @@ return array(
 	|
 	*/
 
-	'profile' => false,
+	'profile' => true,
 
 	/*
 	|--------------------------------------------------------------------------
@@ -67,7 +67,7 @@ return array(
 			'prefix'   => '',
 		),
 
-		'mysql' => array(
+	'mysql' => array(
 			'driver'   => 'mysql',
 			'host'     => $_SERVER["DB1_HOST"] ,
 			'database' => $_SERVER["DB1_NAME"],
