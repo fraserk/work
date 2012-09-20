@@ -8,7 +8,7 @@ class Job_Controller extends Base_Controller
 
 	public function __construct()
 	{
-		$this->Filter('before','auth')->only(array('edit'));
+		$this->Filter('before','auth')->only(array('edit','new','save'));
 	}
 
 	public function get_index()
