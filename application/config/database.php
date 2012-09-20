@@ -70,7 +70,7 @@ return array(
 		'mysql' => array(
 			'driver'   => 'mysql',
 			'host'     => 'tunnel.pagodabox.com:3306',
-			'database' => 'Nyfreet',
+			'database' => 'Nyfree',
 			'username' => 'latoria',
 			'password' => 'Yyd07rvx',
 			'charset'  => 'utf8',
