@@ -92,7 +92,7 @@
 
 				Bundle::start('swiftmailer');
 				$mailer = IoC::resolve('mailer');
-				$message = Swift_message::newInstance('Password Reset')
+				$message = \Swift_message::newInstance('Password Reset')
 							->setFrom(array('kimfraser@gmail.com'=>'Kim Fraser'))
 							->setTo(array('kimfraser@gmail.com'=>'Kimfraser'))
 							->addPart('My Plain Text Message','text/plain')
