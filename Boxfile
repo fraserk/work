@@ -3,8 +3,8 @@ global:
     - LARAVEL_ENV: production
     - LARAVEL_DRIVER: mysql
 #db1:
-#  name: laravel-db
-#  type: mysql
+  name: Nyfree
+  type: mysql
 cache1:
   type: memcached
 web1:
