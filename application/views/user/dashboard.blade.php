@@ -17,7 +17,7 @@
 			</div>
 			@empty
 			<div class="eight columns listings">	
-				<p>You do not have any job post as yet..</p>
+				<p>You do not have any job post as yet. {{HTML::link_to_route('new','Create a Job')}}.</p>
 			</div>
 			@endforelse
 

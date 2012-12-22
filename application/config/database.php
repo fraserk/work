@@ -42,7 +42,7 @@ return array(
 	|
 	*/
 
-	'default' => 'production',
+	'default' => 'mysql',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -72,7 +72,7 @@ return array(
 			'host'     => 'localhost',
 			'database' => 'new_jobs',
 			'username' => 'root',
-			'password' => 'kim',
+			'password' => '',
 			'charset'  => 'utf8',
 			'prefix'   => '',
 		),
