@@ -2,11 +2,6 @@ global:
   env:
     - LARAVEL_ENV: production
     - LARAVEL_DRIVER: mysql
-    $_SERVER["DB1_HOST"] = "tunnel.pagodabox.com"
-    $_SERVER["DB1_PORT"] = "3306"
-    $_SERVER["DB1_NAME"] = "nyfree"
-    $_SERVER["DB1_USER"] = "rossie"
-    $_SERVER["DB1_PASS"] = "3yCrXV5e"
 #db1:
   name: Nyfree
   type: mysql
