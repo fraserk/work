@@ -8,7 +8,7 @@ global:
 cache1:
   type: memcached
 web1:
-  name: lonely-luanne
+  name: relieved-rutha-02
   shared_writable_dirs:
     - /storage/cache
     - /storage/database
