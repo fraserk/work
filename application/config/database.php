@@ -72,7 +72,7 @@ return array(
 			'host'     => 'localhost',
 			'database' => 'new_jobs',
 			'username' => 'root',
-			'password' => '',
+			'password' => 'kim',
 			'charset'  => 'utf8',
 			'prefix'   => '',
 		),
