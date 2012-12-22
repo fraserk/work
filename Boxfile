@@ -4,7 +4,7 @@ global:
     - LARAVEL_DRIVER: mysql
 #db1:
   name: Nyfree
-  type: mysql
+  type: production
 cache1:
   type: memcached
 web1:
