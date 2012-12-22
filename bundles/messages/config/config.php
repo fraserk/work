@@ -39,9 +39,9 @@ return array(
 
 		'smtp' => array(
 			'host'       => 'smtp.gmail.com',
-			'port'       => 587,
-			'username'   => 'kimfraser@gmail.com',
-			'password'   => 'lauren1257',
+			'port'       => 465,
+			'username'   => 'admin@goingclubing.com',
+			'password'   => 'gracekim',
 			'encryption' => 'ssl',
 		),
 

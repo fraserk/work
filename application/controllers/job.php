@@ -15,7 +15,7 @@ class Job_Controller extends Base_Controller
 	{	
 		
 		return View::make('job.index')
-						->with('jobs',Job::all());
+						->with('jobs',Job::order_by('id','DESC')->get());
 	}
 	public function get_detail($id)
 	{
@@ -53,7 +53,8 @@ class Job_Controller extends Base_Controller
 					'title'=>Input::get('title'),
 					'location'=>Input::get('location'),
 					'detail'=>Input::get('location'),
-					'apply'=>Input::get('apply')
+					'apply'=>Input::get('apply'),
+					'status'=>'1'
 			));
 		 return Redirect::to_route('home')
 							->with('message','Job posted successfully');
@@ -74,7 +75,7 @@ class Job_Controller extends Base_Controller
 		}
 
 		{
-			return Redirect::to_route('home')->with('message','Error. you are not the owner of this posting..');
+			return Redirect::to_route('home')->with('message','Error. you are not the owner of this Job..');
 		}
 
 	}
@@ -86,7 +87,8 @@ class Job_Controller extends Base_Controller
 					'title'=>Input::get('title'),
 					'location'=>Input::get('location'),
 					'detail'=>Input::get('detail'),
-					'apply'=>Input::get('apply')
+					'apply'=>Input::get('apply'),
+					'status'=>Input::get('status')
 					));
 		return Redirect::to_route('home')
 							->with('message','Job updated successfully');

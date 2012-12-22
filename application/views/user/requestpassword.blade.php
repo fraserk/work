@@ -1,6 +1,7 @@
 @layout('template.default')
 
 @section('content')
+<div class="row content">
 	<div class="eight columns">
 			<h5>Recover Password</h5>
 
@@ -14,4 +15,5 @@
 				
 			{{Form::close()}}
 	</div>
+</div>
 @endsection

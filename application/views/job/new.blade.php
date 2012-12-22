@@ -1,7 +1,8 @@
 @layout('template.default')
 	@section('content')
-
-		<div class='six columns'>
+	
+		<div class="row content">
+			<div class='six columns'>
 			<h2>Create your ad</h2>
 			<hr />
 			{{Form::open('job/save', 'POST')}}
@@ -25,5 +26,7 @@
 			{{Form::close()}}
 
 		</div>
+	</div>
+
 
 	@endsection

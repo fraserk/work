@@ -13,14 +13,23 @@
    Shared Styles
 ----------------------------------------- */
 body{
-	background: #edf3fe;
+	background: #d99 url("../img/gray_jean.png");
 }
 .content{
-	background: #fff;
-	
-	-webkit-box-shadow: 1px 1px 3px rgba(50, 50, 50, 0.75);
-	-moz-box-shadow:    1px 1px 3px rgba(50, 50, 50, 0.75);
-	box-shadow:         1px 1px 3px rgba(50, 50, 50, 0.75);
+	background: #ffffff;
+	padding-top: 10px;
+	padding-bottom: 10px;
+    
+}
+.logo {
+	font-family: 'Happy Monkey', cursive;
+	font-size:  12px;
+}
+.intro{
+	background: #FFF;
+	border: 1px solid #ddd;
+	margin-bottom:  10px;
+    border-top: 6px solid #ddd;
 }
 .listings{
 	 border-bottom-color:#E8E8E8;
@@ -36,6 +45,9 @@ body{
 	padding: 20px 0; 
 }
 
+.footer{
+	background: #000;
+}
 /* -----------------------------------------
    Page Name 1
 ----------------------------------------- */

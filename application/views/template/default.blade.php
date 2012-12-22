@@ -18,6 +18,7 @@
   {{HTML::style('css/foundation.min.css')}}
   {{HTML::style('css/general_enclosed_foundicons.css')}}    
   {{HTML::style('css/app.css')}}
+  <link href='http://fonts.googleapis.com/css?family=Happy+Monkey' rel='stylesheet' type='text/css'>
   {{HTML::script('js/modernizr.foundation.js')}}
   <!-- IE Fix for HTML5 Tags -->
   <!--[if lt IE 9]>
@@ -28,7 +29,7 @@
 	<body>
 			<div class='row'>  <!-- Start header -->
 				<div class="three columns">
-					<h1><img src="http://placehold.it/400x100&text=Logo" /></h1>
+					<h1>{{HTML::image('img/logo.png')}}</h1>
 				</div>
 				<div class='nine columns'>
 					<ul class='nav-bar right'>
@@ -48,20 +49,38 @@
 				</div>
 			</div> <!-- End of header -->
 
-			<div class='row content'> <!-- Start content area -->
+			
 					 @if(session::has('message'))
-          				{{session::get('message')}} <br />
+					 <div class="row">
+						 <div class="twelve columns alert-box alert">
+          					{{session::get('message')}} <br />
+          				</div>
+          			</div>
        				 @endif
+       		<div class=''> <!-- Start content area -->		 
 					@yield('content')
+					@yield('sidebar')
 			</div>
 
-			<div class="row">
-		      <footer class="twelve columns">
-		          <ul class="link-list">
-		           <li>{{HTML::link_to_route('home', 'Home')}}</li>
-					<li>{{HTML::link_to_route('new', 'Post A Job')}}</li>
+			<div class="row footer">
 
-		          </ul> 
+		      <footer class="twelve columns">
+		         <div class="row">
+		         	<div class="four columns">
+				          <ul class="link-list">
+				           <li>{{HTML::link_to_route('home', 'Home')}}</li>
+							<li>{{HTML::link_to_route('new', 'Post A Job')}}</li>
+
+				          </ul> 
+		      		</div>
+
+		      		<div class="four columns">
+		      			About us
+		      		</div>
+		      		<div class="four columns">
+		      			Some more stuff goes over here
+		      		</div>
+		      </div>
 		      </footer> <!-- End of footer -->
 		  </div>
 	</body>

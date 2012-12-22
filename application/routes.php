@@ -38,6 +38,7 @@ Route::get('job/new',array('as'=>'new','uses'=>'job@new'));
 Route::post('job/save',array('uses'=>'job@save'));
 Route::get('job/(:num)/edit',array('as'=>'edit','uses'=>'job@edit'));
 Route::put('job/update', array('uses'=>'job@update'));
+Route::put('job/cancel',array('uses'=>'job@cancel'));
 
 
 Route::get('user/register',array('as'=>'register','uses'=>'user@register'));
@@ -48,6 +49,8 @@ Route::get('user/logout',array('as'=>'logout','uses'=>'user@logout'));
 Route::get('user/dashboard',array('as'=>'dashboard','uses'=>'user@dashboard'));
 Route::get('user/getpassword',array('as'=>'getpassword','uses'=>'user@requestpassword'));
 Route::POST('user/sendpassword',array('uses'=>'user@sendpassword'));
+Route::get('user/(:any)/resetpassword',array('as'=>'newpassword','uses'=>'user@resetpassword'));
+Route::POST('user/savepassword',array('uses'=>'user@savepassword'));
 
 /*
 |--------------------------------------------------------------------------

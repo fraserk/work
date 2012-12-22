@@ -1,7 +1,8 @@
 @layout('template.default')
-	@section('content')
+	@section('content') 
+	<div class="row content">
 		<div class='six columns'>
-			<h2>Create your ad</h2>
+			<h2>Edit Your Ad</h2>
 			{{Form::open('job/update', 'PUT')}}
 				{{Form::label('company', 'Name of Company:')}}
 				{{Form::text('company',$job->company)}}
@@ -19,11 +20,14 @@
 				{{Form::label('howtoapply', 'How to Apply:')}}
 				{{Form::textarea('apply',$job->apply)}}
 
+				{{Form::label('Status', 'Job Status')}}
+				{{form::checkbox('status','1',$job->status)}}
 				{{Form::hidden('id',$job->id)}}
 
-				{{Form::submit('Edit Job')}}
+				<p>{{Form::submit('Edit Job',array('class'=>'large secondary button'))}}</p>
 			{{Form::close()}}
 
 		</div>
+	</div>
 
 	@endsection
