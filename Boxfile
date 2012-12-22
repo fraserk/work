@@ -1,10 +1,10 @@
 global:
   env:
     - LARAVEL_ENV: production
-    - LARAVEL_DRIVER: mysql
+    
 #db1:
   name: Nyfree
-  type: production
+  type: mysql
 cache1:
   type: memcached
 web1:
