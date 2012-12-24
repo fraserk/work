@@ -40,8 +40,8 @@ return array(
 		'smtp' => array(
 			'host'       => 'smtp.gmail.com',
 			'port'       => 465,
-			'username'   => 'admin@goingclubing.com',
-			'password'   => 'gracekim',
+			'username'   => 'info@nyfreelancers.com',
+			'password'   => 'lauren1257',
 			'encryption' => 'ssl',
 		),
 
