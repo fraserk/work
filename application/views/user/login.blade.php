@@ -16,7 +16,7 @@
 				<p>{{Form::checkbox('remember','on')}} Remember Me</p>
 				{{Form::submit('Login',array('class'=>'large button secondary'))}}
 
-				<p>{{HTML::link_to_route('home','Register')}} : {{HTML::link_to_route('getpassword','Forgotten your password?')}}</p>
+				<p>{{HTML::link_to_route('register','Register')}} : {{HTML::link_to_route('getpassword','Reset Password')}}</p>
 			{{Form::close()}}
 		</div>
 	</div>

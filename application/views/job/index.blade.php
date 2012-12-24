@@ -42,9 +42,9 @@
 	</div>
 
 	@empty
-	<div class="row content"
+	<div class="row content">
 			<div class="eight columns listings">	
-				<p>You do not have any job post as yet. {{HTML::link_to_route('new','Create an Ad')}}.</p>
+				<p>No job  posted as yet. {{HTML::link_to_route('new','Create an Ad')}}.</p>
 			</div>
 	</div>
 	@endforelse

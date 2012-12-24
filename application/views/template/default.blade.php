@@ -11,7 +11,7 @@
   <!-- Set the viewport width to device width for mobile -->
   <meta name="viewport" content="width=device-width" />
 
-  <title>MY Job Site</title>
+  <title>NY freelancer</title>
   <!-- Included CSS Files (Compressed) -->
   
 
