@@ -10,6 +10,7 @@
 
 	<div class="eight columns">
 		<h4>Find a Programmer</h4>
+		<hr />
 <p>
 	Nyfreelancers.com is a job board with a declared goal of bringing together local
 	companies and professionals who take interests in latest web technologies, 
@@ -20,7 +21,7 @@
 
 
 
-	@foreach  ($jobs as $job)
+	@forelse ($jobs as $job)
 	<div class="row content">
 		<div class="twelve columns listings">
 			<div class="row ">
@@ -40,6 +41,13 @@
 		</div>
 	</div>
 
-		@endforeach
+	@empty
+	<div class="row content"
+			<div class="eight columns listings">	
+				<p>You do not have any job post as yet. {{HTML::link_to_route('new','Create an Ad')}}.</p>
+			</div>
+	</div>
+	@endforelse
 
+		
 @endsection

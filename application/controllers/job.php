@@ -81,6 +81,26 @@ class Job_Controller extends Base_Controller
 	}
 	public function put_update()
 	{
+		
+		$rules = array(
+				'company' => 'required|min:3',
+				'title' => 'required|min:5',
+				'location' => 'required',
+				'detail' => 'required|min:20',
+				'apply' => 'required|min:5'
+
+			);
+
+		$validation = Validator::make(Input::all(), $rules);
+		if ($validation->fails())
+		{
+				$id = Input::get('id');
+				return Redirect::to_route('edit',$id)
+									->with_errors($validation);
+			}
+			{
+
+
 		$id = Input::get('id');
 		Job::update($id,array(
 					'company'=>Input::get('company'),
@@ -90,7 +110,8 @@ class Job_Controller extends Base_Controller
 					'apply'=>Input::get('apply'),
 					'status'=>Input::get('status')
 					));
-		return Redirect::to_route('home')
+		return Redirect::to_route('detail',$id)
 							->with('message','Job updated successfully');
 	}
+}
 }

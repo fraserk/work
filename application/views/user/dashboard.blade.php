@@ -12,7 +12,7 @@
 				{{$d->created_at=date('M d')}} | {{HTML::link_to_route('detail',$d->title,array($d->id))}} 
 				</div>
 				<div class="four columns listings">
-					{{HTML::link_to_route('edit','EDIT',array($d->id))}} | Status: @if ($d->status==True) Active @else Close @endif
+					{{HTML::link('job/'.$d->id .'/edit','edit',array( 'span class'=>'label normal round'))}} @if ($d->status==True) <span class="success label">Active</span> @else <span class="alert label">in-active</span> @endif
 				</div>
 			</div>
 			@empty
@@ -22,12 +22,7 @@
 			@endforelse
 
 	</div>
-			<div class='four columns panel'>
-				<h5>User Info:</h5>
-				<p>Username: {{ Auth::user()->username}}</p>
-				<p>Email: {{ Auth::user()->email}}</p>
-
-			</div>
+			
 		</div>
 	
 @endsection

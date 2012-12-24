@@ -16,7 +16,8 @@
   
 
   {{HTML::style('css/foundation.min.css')}}
-  {{HTML::style('css/general_enclosed_foundicons.css')}}    
+  {{HTML::style('css/general_enclosed_foundicons.css')}}
+  {{HTML::style('css/general_enclosed_foundicons_ie7.css')}}      
   {{HTML::style('css/app.css')}}
   <link href='http://fonts.googleapis.com/css?family=Happy+Monkey' rel='stylesheet' type='text/css'>
   {{HTML::script('js/modernizr.foundation.js')}}
@@ -67,18 +68,28 @@
 		      <footer class="twelve columns">
 		         <div class="row">
 		         	<div class="four columns">
-				          <ul class="link-list">
+				          <ul class="four side-nav">
 				           <li>{{HTML::link_to_route('home', 'Home')}}</li>
-							<li>{{HTML::link_to_route('new', 'Post A Job')}}</li>
+						<li>{{HTML::link_to_route('new', 'Post A Job')}}</li>
+						@if(Auth::check())
+						<li>{{HTML::link_to_route('dashboard', 'Dashboard')}}</li>
+						@else
+						<li>{{HTML::link_to_route('register', 'Register')}}</li>
+						@endif	
+						@if(Auth::check())
+						<li>{{HTML::link_to_route('logout', 'Logout')}}</li>
+						@else
+						<li>{{HTML::link_to_route('login', 'Login')}}</li>
+						@endif
 
 				          </ul> 
 		      		</div>
 
 		      		<div class="four columns">
-		      			About us
+		      			
 		      		</div>
 		      		<div class="four columns">
-		      			Some more stuff goes over here
+		      			
 		      		</div>
 		      </div>
 		      </footer> <!-- End of footer -->
