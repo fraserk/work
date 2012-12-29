@@ -112,6 +112,47 @@ class Job_Controller extends Base_Controller
 					));
 		return Redirect::to_route('detail',$id)
 							->with('message','Job updated successfully');
+		}
 	}
-}
+
+	public function get_contact()
+	{
+		return View::make('job.contact');
+	}
+	public function post_contact()
+	{
+
+		$inputs = array(
+				'name'=> Input::get('name'),
+				'email'=> Input::get('email'),
+				'message'=> Input::get('message')
+			);
+
+		$rules = array(
+				'name' => 'required',
+				'email'=> 'required|email',
+				'message'=> 'required'
+			);
+
+		$validation = Validator::make($inputs, $rules);
+
+		if($validation->fails())
+
+		{
+			return Redirect::to_route('contact')->with_errors($validation)->with_input();
+
+		}
+
+		{
+			$message = Message::to('kimfraser@gmail.com')
+			            ->from(Input::get('email'))
+			            ->subject('Website Messge')
+			            ->body(input::get('message'))
+			            ->html (true)
+			            ->send();
+						//everything is good, redirect back
+						return Redirect::to_route('contact')
+									->with('message','Thanks You.  We will reply to you message shortly....');
+		}
+	}
 }

@@ -40,6 +40,9 @@ Route::get('job/(:num)/edit',array('as'=>'edit','uses'=>'job@edit'));
 Route::put('job/update', array('uses'=>'job@update'));
 Route::put('job/cancel',array('uses'=>'job@cancel'));
 
+Route::get('contact', array('as'=>'contact','uses' => 'job@contact'));
+Route::Post('contact', array('uses' => 'job@contact'));
+
 
 Route::get('user/register',array('as'=>'register','uses'=>'user@register'));
 Route::POSt('user/save',array('uses'=>'user@save'));

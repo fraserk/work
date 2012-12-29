@@ -20,7 +20,7 @@
   {{HTML::style('css/general_enclosed_foundicons_ie7.css')}}      
   {{HTML::style('css/app.css')}}
   <link href='http://fonts.googleapis.com/css?family=Happy+Monkey' rel='stylesheet' type='text/css'>
-  {{HTML::script('js/modernizr.foundation.js')}}
+  
   <!-- IE Fix for HTML5 Tags -->
   <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -45,6 +45,7 @@
 						<li>{{HTML::link_to_route('logout', 'Logout')}}</li>
 						@else
 						<li>{{HTML::link_to_route('login', 'Login')}}</li>
+						<li>{{HTML::link_to_route('contact','Contact us')}}</li>
 						@endif
 					</ul>
 				</div>
@@ -80,6 +81,7 @@
 						<li>{{HTML::link_to_route('logout', 'Logout')}}</li>
 						@else
 						<li>{{HTML::link_to_route('login', 'Login')}}</li>
+						<li>{{HTML::link_to_route('contact','Contact us')}}</li>
 						@endif
 
 				          </ul> 
@@ -94,5 +96,20 @@
 		      </div>
 		      </footer> <!-- End of footer -->
 		  </div>
+		  {{HTML::script('js/modernizr.foundation.js')}}
+		  <script type="text/javascript">
+
+			  var _gaq = _gaq || [];
+			  _gaq.push(['_setAccount', 'UA-128168-2']);
+			  _gaq.push(['_trackPageview']);
+
+			  (function() {
+			    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			  })();
+
+			</script>
+		  
 	</body>
 </html>

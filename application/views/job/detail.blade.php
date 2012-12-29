@@ -4,7 +4,7 @@
 
 <div class="row content">
 	<div class="eight columns content">
-		<h3>{{$job->title}}</h3>
+		<div class="panel"><h3>{{$job->title}}</h3></div>
 
 		<p>@{{$job->company}}</p>
 		Posted {{$job->created_at = date("M d")}}
