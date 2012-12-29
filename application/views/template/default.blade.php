@@ -11,7 +11,12 @@
   <!-- Set the viewport width to device width for mobile -->
   <meta name="viewport" content="width=device-width" />
 
-  <title>NY freelancer</title>
+ <meta content="Ny Freelancerss.com is a job board with a declared goal of bringing together companies and professionals who take interests in latest web technologies, web standards and web design trends." name="description" />
+    <meta content="jobs,freelance,design,development,web design,web development,job board" name="keywords" />
+  <title>NY freelancers | New York Freelancers and developers</title>
+
+
+
   <!-- Included CSS Files (Compressed) -->
   
 
