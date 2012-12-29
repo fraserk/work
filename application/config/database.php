@@ -42,7 +42,7 @@ return array(
 	|
 	*/
 
-	 'default' => 'MYSQL',
+	 'default' => 'production',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -76,16 +76,16 @@ return array(
 			'charset'  => 'utf8',
 			'prefix'   => '',
 		),
-		// 'production' => array(
-		// 	'driver'   => 'mysql',
-		// 	'host'     => $_SERVER["DB1_HOST"],
-		// 	'database' => $_SERVER["DB1_NAME"],
-		// 	'username' => $_SERVER["DB1_USER"],
-		// 	'password' => $_SERVER["DB1_PASS"],
-		// 	'port'	   => $_SERVER["DB1_PORT"] ,
-		// 	'charset'  => 'utf8',
-		// 	'prefix'   => '',
-		// ),
+		'production' => array(
+			'driver'   => 'mysql',
+			'host'     => $_SERVER["DB1_HOST"],
+			'database' => $_SERVER["DB1_NAME"],
+			'username' => $_SERVER["DB1_USER"],
+			'password' => $_SERVER["DB1_PASS"],
+			'port'	   => $_SERVER["DB1_PORT"] ,
+			'charset'  => 'utf8',
+			'prefix'   => '',
+		),
 		'pgsql' => array(
 			'driver'   => 'pgsql',
 			'host'     => 'localhost',
